@@ -41,8 +41,6 @@ wire [8*12-1:0] tpmem_out_2, tpmem_out_3;
 wire [16-1:0] counter_out;
 wire [16-1:0] counter_out_m1, counter_out_m10, counter_out_m19;
 
-wire [8*BW-1:0] temp;
-
 assign NWRT_OUT = 1'b0;
 
 // for input memory
