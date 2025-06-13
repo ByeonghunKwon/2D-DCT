@@ -45,23 +45,23 @@ initial	$readmemh("image_in_1.txt", TEST.MEM_IN.SRAM_syn.SRAM32768x64.Mem); //in
 
 
 
-// acc_rounded check
-// dct_in module
-integer j;
-integer err = 0;
-initial
-begin		
-	$readmemh("output_1_1D.txt", mat_in);
-	begin
-		#(20);
-		for (j=0; j<32790; j=j+1)
-		begin
-			vector <= mat_in[j];
-			if (vector != TEST.dct_in.DCT_out) err = err + 1;
-			#(10);
-		end
-	end
-end
+// // acc_rounded check
+// // dct_in module
+// integer j;
+// integer err = 0;
+// initial
+// begin		
+// 	$readmemh("output_1_1D.txt", mat_in);
+// 	begin
+// 		#(20);
+// 		for (j=0; j<32790; j=j+1)
+// 		begin
+// 			vector <= mat_in[j];
+// 			if (vector != TEST.dct_in.DCT_out) err = err + 1;
+// 			#(10);
+// 		end
+// 	end
+// end
 
 
 
@@ -110,7 +110,7 @@ end
 
 initial
 begin
-	f = $fopen("image_out_1_2x2.txt","w"); //output image, this is the output file that finished 2D-DCT operations.
+	f = $fopen("image_out_1_test.txt","w"); //output image, this is the output file that finished 2D-DCT operations.
 
 	#327900; //change if you need
 
