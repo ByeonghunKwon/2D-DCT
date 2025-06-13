@@ -1,6 +1,7 @@
-// TPmem new : simultaniously operating read and write
-// TPmem_11b : removing last 11*2 FFs in array[6:7]
-// TPmem_12b : removing last 12*2 FFs in every array
+// TPmem_new : simultaniously operating read and write
+// |---	TPmem_11b : Optimized TPmem_new with removing last 11*2 FFs in array[6:7]
+// |---	TPmem_12b : Optimized TPmem_new with removing last 12*2 FFs in every array
+
 
 module TPmem_11b
 #( parameter BW = 11 )
